@@ -5,6 +5,7 @@ function App() {
   const [numberOfUsers, setNumberOfUsers] = useState(0);
   const [userName, setUserName] = useState("Enter name");
   const [userAge, setUserAge] = useState("Enter Age");
+  const [userEmail, setUserEmail] = useState("Enter Email");
 
   const addValueToFirebase = () => {
     if (userAge < 100 && userAge > 0 && userName != "") {
@@ -18,19 +19,28 @@ function App() {
     <>
       <div className="w-screen h-screen bg-black justify-center  flex">
         {/* container */}
-        <div className="lg:w-fit w-full h-fit bg-slate-700 p-4 rounded-sm lg:mt-12 m-8  ">
+        <div className="lg:w-fit w-full h-fit bg-slate-700 p-4 rounded-sm lg:mt-12 m-7 md:m-10 ">
           {/* input fields */}
-          <div className="grid lg:grid-cols-5 grid-cols-1 gap-2 ">
+          <div className="grid lg:grid-cols-7 grid-cols-1 lg:gap-2 gap-3 ">
             <input
               className="lg:col-span-2 col-span-1 h-fit rounded-sm p-[2px] outline-none"
               placeholder={userName}
               onChange={(e) => setUserName(e.target.value)}
+              required
             />
             <input
               className="lg:col-span-2 col-span-1 h-fit rounded-sm p-[2px] outline-none"
               placeholder={userAge}
               onChange={(e) => setUserAge(e.target.value)}
               type="number"
+              required
+            />
+            <input
+              className="lg:col-span-2 col-span-1 h-fit rounded-sm p-[2px] outline-none"
+              placeholder={userEmail}
+              onChange={(e) => setUserEmail(e.target.value)}
+              type="text"
+              required
             />
             <button
               className="lg:col-span-1 col-span-1 bg-slate-950 text-white rounded-[3px] hover:bg-slate-900 ease-in-out duration-300"
