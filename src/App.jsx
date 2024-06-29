@@ -18,7 +18,7 @@ function App() {
     <>
       <div className="w-screen h-screen bg-black justify-center p-11 flex">
         {/* container */}
-        <div className="lg:w-fit w-2/3 h-fit bg-slate-700 p-4 rounded-sm">
+        <div className="lg:w-fit w-2/3 sm:w-4/5 h-fit bg-slate-700 p-4 rounded-sm">
           {/* input fields */}
           <div className="grid lg:grid-cols-5 grid-cols-1 gap-2 ">
             <input
