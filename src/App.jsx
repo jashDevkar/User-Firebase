@@ -20,7 +20,7 @@ function App() {
           Age:userAge,
           Email:userEmail
         })
-        alert("data added to ",name);
+        alert("data added to ",userName);
         setUserAge("");
         setUserEmail("");
         setUserName("");
